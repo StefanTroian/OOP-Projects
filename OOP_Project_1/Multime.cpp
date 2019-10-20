@@ -71,6 +71,24 @@ Multime Multime::operator-(Multime m) {
     return rez;
 }
 
+Multime Multime::operator*(Multime& m) {
+    Multime rez;
+    rez.nr_elem = 0;
+    rez.vec = new int[rez.nr_elem];
+    for(int i = 0; i < this->nr_elem; i++) {
+        for(int j = 0; j < m.nr_elem; j++)
+            if(this->vec[i] == m.vec[j]) {
+                rez.vec[rez.nr_elem] = m.vec[i];
+                rez.nr_elem++;
+        }
+    }
+    cout << "Intersectie: ";
+    if(rez.nr_elem == 0)
+        cout << "Multimea vida";
+
+    return rez;
+}
+
 Multime& Multime::operator=(const Multime& copie) {
     if(this == &copie)
         return *this;
@@ -82,21 +100,6 @@ Multime& Multime::operator=(const Multime& copie) {
     for(int i = 0; i < copie.nr_elem; i++)
         this->vec[i] = copie.vec[i];
     return *this;
-}
-
-Multime::Multime(const Multime &m1, const Multime &m2) {
-    this->nr_elem = 0;
-    this->vec = new int[this->nr_elem];
-    for(int i = 0; i < m1.nr_elem; i++) {
-        for(int j = 0; j < m2.nr_elem; j++)
-            if(m1.vec[i] == m2.vec[j]) {
-                this->vec[this->nr_elem] = m1.vec[i];
-                this->nr_elem++;
-        }
-    }
-    cout << "Intersectie: ";
-    if(this->nr_elem == 0)
-        cout << "Multimea vida";
 }
 
 istream& operator>>(istream& in, Multime& m) {
