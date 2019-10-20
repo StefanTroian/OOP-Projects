@@ -15,8 +15,8 @@ public:
     Multime(const Multime &);                       ///Constructor de copiere
     Multime operator+(Multime&);                    ///Reuniune multimi
     Multime operator-(Multime);                     ///Diferenta multimi
+    Multime operator*(Multime&);                    ///Intersectie multimi
     Multime& operator=(const Multime&);             ///Supraincarcare operator egal
-    Multime(const Multime &, const Multime &);      ///Intersectie multimi
     friend istream& operator>>(istream&,Multime&);  ///Citire multime
     friend ostream& operator<<(ostream&,Multime&);  ///Afisare multime
     void vector_multime();                          ///Transformare vector in multime
