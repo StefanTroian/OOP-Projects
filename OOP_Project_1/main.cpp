@@ -15,8 +15,9 @@ int main()
     cout << m2;
 
     ///intersectie
-    Multime m4(m1,m2);
-    m4.afisare();
+    Multime g;
+    g = m1 * m2;
+    g.afisare();
 
     ///diferenta
     Multime m5;
