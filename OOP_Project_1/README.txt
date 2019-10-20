@@ -10,6 +10,8 @@ iar in cazul alcarii dinamice, se dezaloca zona de memorie utilizata);
 duplicatelor din respectivul vectorl
   -reuniune a doua multimi, implementata prin supraincarcarea operatorului +;
   -diferenta a doua multimi, implementata prin supraincarcarea operatorului -;
+  -intersectia a doua multimi, implementata prin supraincarcarea operatorului *;
+  -atribuirea unei a doua multimi, implemantata prin supraincarcarea operatorului =;
   -implementarea de functii/metode friend daca este necesar;
   -supraincarcarea operatorilor << si >> pentru iesiri si intrari de obiecte;
   -metoda/functie publica prin care se realizeaza citirea informatiilor complete a n
