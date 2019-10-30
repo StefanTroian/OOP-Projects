@@ -3,10 +3,16 @@
 
 int main()
 {
-    ///supraincarcarea operatorilor << , >>
-    Multime m1;
-    cout << "MULTIME 1\n";
-    cin >> m1;
+    ///supraincarcarea operatorilor << , >> si contructor cu parametrii
+    int el,*v;
+    cout << "Numar elemente vector: ";
+    cin >> el;
+    v = new int(el);
+    cout << "Elemente vector: ";
+    for(int i = 0; i < el; i++) {
+        cin >> v[i];
+    }
+    Multime m1(el,v);
     cout << m1;
 
     Multime m2;
