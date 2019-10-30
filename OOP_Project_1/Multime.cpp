@@ -12,6 +12,8 @@ Multime::Multime(int nr_elem, int* vec) {
     for(int i = 0; i < nr_elem; i++) {
         this->vec[i] = vec[i];
     }
+    //eliminearea duplicatelor prin apelarea functiei
+    vector_multime();
 }
 
 Multime::~Multime() {
@@ -27,6 +29,7 @@ int compare (const void * a, const void * b) {
 
 Multime::Multime(const Multime &copie) {
     this->nr_elem = copie.nr_elem;
+    this->vec = new int[this->nr_elem];
     for(int i = 0; i < nr_elem; i++) {
         this->vec[i] = copie.vec[i];
     }
@@ -47,10 +50,11 @@ Multime Multime::operator+(Multime& m) {
     if(rez.nr_elem == 0)
         cout << "Multimea vida";
 
+    rez.vector_multime();
     return rez;
 }
 
-Multime Multime::operator-(Multime m) {
+Multime Multime::operator-(Multime& m) {
     Multime rez;
     rez.nr_elem = 0;
 
@@ -110,11 +114,12 @@ istream& operator>>(istream& in, Multime& m) {
     for(int i = 0; i < m.nr_elem; i++) {
         in >> m.vec[i];
     }
+    m.vector_multime();
     return in;
 }
 
 ostream& operator<<(ostream& out, Multime& m) {
-    m.vector_multime();
+//    m.vector_multime();
     out << "Multime cu " << m.nr_elem << " elemente: ";
     for(int i = 0; i < m.nr_elem; i++) {
         out << m.vec[i] << " ";
@@ -138,7 +143,7 @@ void Multime::vector_multime() {
 }
 
 void Multime::afisare() {
-    vector_multime();
+//    vector_multime();
     for(int i = 0; i < nr_elem; i++)
         cout << vec[i] << " ";
     cout << endl;
