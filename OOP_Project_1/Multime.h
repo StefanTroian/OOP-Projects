@@ -14,7 +14,7 @@ public:
     ~Multime();                                     ///Destructor
     Multime(const Multime &);                       ///Constructor de copiere
     Multime operator+(Multime&);                    ///Reuniune multimi
-    Multime operator-(Multime);                     ///Diferenta multimi
+    Multime operator-(Multime&);                    ///Diferenta multimi
     Multime operator*(Multime&);                    ///Intersectie multimi
     Multime& operator=(const Multime&);             ///Supraincarcare operator egal
     friend istream& operator>>(istream&,Multime&);  ///Citire multime
@@ -23,5 +23,4 @@ public:
     void afisare();                                 ///Functie separata de afisare
     static Multime* informatii_obiecte(int);        ///Citirea a n multimi
 };
-
 #endif // MULTIME_H_INCLUDED
