@@ -32,6 +32,13 @@ Abonat_Skype_Extern& Abonat_Skype_Extern::operator=(const Abonat_Skype_Extern& c
 istream& operator>>(istream& in, Abonat_Skype_Extern& s) {
     cout << "ID: ";
     in >> s.id;
+    try { if(s.id < 0)
+            throw 1.0;
+    } catch(double) {
+        cout << "ID invalid\n";
+        cout << "ID: " ;
+        in >> s.id;
+    }
     cout << "Nume: ";
     in >> s.nume;
     cout << "Numar de telefon: ";
