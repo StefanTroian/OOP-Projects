@@ -32,6 +32,13 @@ Abonat_Skype_Romania& Abonat_Skype_Romania::operator=(const Abonat_Skype_Romania
 istream& operator>>(istream& in, Abonat_Skype_Romania& s) {
     cout << "ID: ";
     in >> s.id;
+    try { if(s.id < 0)
+            throw 1.0;
+    } catch(double) {
+        cout << "ID invalid\n";
+        cout << "ID: " ;
+        in >> s.id;
+    }
     cout << "Nume: ";
     in >> s.nume;
     cout << "Numar de telefon: ";
