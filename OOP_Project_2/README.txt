@@ -14,6 +14,7 @@ Clasele contin:
 -supraincarcarea operatorilor >> , << , =
 -concepte de mostenire
 -functii virtuale (pure - unde se considera mai natural)
+-tratare de exceptii
 
 Clasa Agenda ce contine o lista de abonati si sa se supraincarce
 operatorul[](indexare) care returneaza abonatul cu numele precizat.
