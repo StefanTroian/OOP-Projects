@@ -30,12 +30,12 @@ Abonat_Skype& Abonat_Skype::operator=(const Abonat_Skype &copie) {
 istream& operator>>(istream &in, Abonat_Skype &a) {
     cout << "ID: ";
     in >> a.id;
-    try { if(s.id < 0)
+    try { if(a.id < 0)
             throw 1.0;
     } catch(double) {
         cout << "ID invalid\n";
         cout << "ID: " ;
-        in >> s.id;
+        in >> a.id;
     }
     cout << "Nume: ";
     in >> a.nume;
