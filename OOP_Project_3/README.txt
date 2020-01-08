@@ -11,6 +11,7 @@ clasa Vertebrate	clasa Nevertebrate
 Clasele contin:
 -constructori (+ de copiere) 
 -destructori
+-o variabila de tip pair
 -supraincarcare op =, op>> ca si friend
 -functii viruale rescrise in clasele derivate
 -concepte de mostenire
